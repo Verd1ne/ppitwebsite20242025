@@ -40,20 +40,7 @@
     .leftPanel {
         position: relative;
         width: 40%; /* One-third of the page */
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.95) 30%,
-            rgba(0, 0, 0, 0.8) 30%,
-            rgba(0, 0, 0, 0.6) 50%,
-            rgba(0, 0, 0, 0.3) 75%,
-            transparent 95%
-            ),
-            radial-gradient(
-            circle at top left,
-            rgba(0, 0, 0, 0.8) 40%,
-            rgba(0, 0, 0, 0.4) 60%,
-            transparent 100%
-        );
+        background: black;
         z-index: 2;
         pointer-events: none; /* Ensure it doesn't interfere with interactions */
         height: 100%;
