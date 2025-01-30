@@ -23,7 +23,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-        <a href="/">Home</a> 
+        <a href="/home">Home</a> 
         <a href="/about">About</a> 
         <a href="/committee">Committee</a> 
         <a href="/events">Events</a> 
