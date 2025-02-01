@@ -229,16 +229,17 @@ export default function CommitteeCarousel() {
 	}
 
 	return (
-		<>
+		<div className="w-full overflow-x-hidden">
 			<Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
 			<div className="bg-black text-white font-[500] font-montserrat">
 				{/* Banner Section */}
 				<div className="relative h-[50vh] xl:h-screen w-full overflow-hidden mb-[2%] ">
 					<Image
-						src="/CMT_Assets/Full/Banner.PNG"
+						src="/CMT_Assets/Full/Banner.png"
 						alt="Banner Background"
 						fill
 						className="object-cover opacity-70"
+						priority
 					/>
 					<div className="absolute inset-0 bg-black bg-opacity-20" />
 					<div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
@@ -317,6 +318,6 @@ export default function CommitteeCarousel() {
 					</div>
 				)}
 			</div>
-		</>
+		</div>
 	);
 }
