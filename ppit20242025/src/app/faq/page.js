@@ -212,7 +212,7 @@ export default function Faq() {
 							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-xs text-slate-100 ${
 								selectedCategory === category
 									? "bg-white text-[#000]"
-									: "border-white"
+									: "border-white text-[#FFF]"
 							}`}
 							onClick={() => setSelectedCategory(category)}
 						>
