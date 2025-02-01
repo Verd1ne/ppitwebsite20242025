@@ -112,21 +112,21 @@ export default function Home() {
 			{/* About Section */}
 			<section
 				id="about-us"
-				className="py-20 px-4 lg:px-8 max-w-[90rem] mx-auto"
+				className="py-20 md:px-12 px-8 lg:px-8 max-w-[90rem] mx-auto"
 			>
 				<div className="flex items-center justify-center lg:block">
 					<hr className="w-[20%] md:w-[10%] my-4 border-t-[3px] border-red-600" />
 				</div>
-				<h2 className="text-center lg:text-left sm:text-4xl text-3xl font-extrabold mb-4 text-red-600 font-title">
+				<h2 className="text-center lg:text-left sm:text-4xl text-3xl font-bold mb-4 text-red-600 font-montserrat">
 					ABOUT US
 				</h2>
 				<div className="grid grid-row-4 md:grid-cols-8 md:grid-rows-1 gap-8">
 					<div className="row-start-2 md:row-start-1 md:col-span-5 lg:col-span-6">
-						<div className="text-2xl md:text-xl lg:text-3xl font-[530] text-center md:text-left font-text">
+						<div className="text-2xl md:text-xl lg:text-3xl font-[530] text-center md:text-left font-montserrat">
 							Keinginan pelajar-pelajar Indonesia di Kota Shenzhen untuk berdiri
 							mandiri sebagai sebuah organisasi bermula pada tahun 2018.
 						</div>
-						<div className="text-lg md:text-base lg:text-xl mt-4 font-text">
+						<div className="text-lg md:text-base lg:text-xl mt-4 font-montserrat">
 							Di tahun yang sama, Perhimpunan Pelajar Indonesia di Tiongkok
 							ranting Shenzhen (PPITSZ) resmi berdiri sebagai ranting dari
 							cabang Guangzhou. Kepengurusan pertama PPITSZ dipimpin oleh
@@ -140,13 +140,13 @@ export default function Home() {
 						<div className="mt-8 flex space-x-16">
 							<div className="flex flex-col items-start">
 								<div className="text-5xl font-[420]">6+</div>
-								<div className="text-gray-600 text-center font-title">
+								<div className="text-gray-600 text-center font-montserrat">
 									Tahun Berdiri
 								</div>
 							</div>
 							<div className="flex flex-col items-start">
 								<div className="text-5xl font-[420]">450+</div>
-								<div className="text-gray-600 text-center font-title">
+								<div className="text-gray-600 text-center font-montserrat">
 									Mahasiswa di Shenzhen
 								</div>
 							</div>
@@ -175,7 +175,7 @@ export default function Home() {
 									<span className="text-red-600 mr-2 font-montserrat">►</span>
 									Visi
 								</h3>
-								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-bold">
+								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-medium">
 									PPIT Shenzhen menjadi rumah kedua yang menginspirasi,
 									mendukung, dan memberdayakan pelajar Indonesia untuk mencapai
 									potensi penuh mereka. Kami menciptakan lingkungan inklusif,
@@ -201,7 +201,7 @@ export default function Home() {
 									</span>
 									Misi
 								</h3>
-								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-bold">
+								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-medium">
 									Kami berkomitmen untuk terus maju dengan inisiatif dan
 									semangat tinggi, mendorong anggota PPIT Shenzhen meraih
 									keberhasilan dan memaksimalkan potensi mereka. Kami menekankan
@@ -239,7 +239,7 @@ export default function Home() {
 				</div>
 
 				<div className="mt-12 md:mt-16 col-span-5 md:col-span-5">
-					<div className="flex flex-col lg:flex-row gap-8 md:gap-24 md:mx-24">
+					<div className="flex flex-col lg:flex-row gap-6 md:gap-8 md:mx-24 mx-16">
 						<div className="flex flex-col">
 							<h2 className="text-[2.75rem] md:text-5xl font-black text-center md:text-left font-montserrat">
 								Merchandise
@@ -253,7 +253,7 @@ export default function Home() {
 								href="https://docs.google.com/forms/d/e/1FAIpQLSfJbSNKm60OtPAqF9Pk6TqfwXrS3LODmjnwPORwbZDtBu7nDQ/viewform?usp=pp_url"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-white font-bold text-3xl px-8 py-3 bg-red-600 font-montserrat hover:scale-110 transition duration-300"
+								className="text-white font-bold xl:text-3xl text-2xl  px-8 py-3 bg-red-600 font-montserrat hover:scale-110 transition duration-300"
 							>
 								BUY NOW
 							</Link>
@@ -290,13 +290,13 @@ export default function Home() {
 				<div className="max-w-7xl mx-auto">
 					{/* Centered Heading */}
 					<div className="flex justify-center">
-						<h2 className="text-xl md:text-4xl font-bold mb-12 text-white bg-red-700 inline-block py-3 md:py-4 px-6 rounded-lg font-montserrat">
+						<h2 className="text-lg md:text-3xl sm:text-xl font-bold mb-12 text-white bg-red-700 inline-block py-3 md:py-4 px-6 rounded-lg font-montserrat">
 							UNIVERSITIES IN SHENZHEN
 						</h2>
 					</div>
 
 					{/* Centered List of Universities */}
-					<div className="flex justify-center">
+					<div className="flex justify-center mx-6 mb-6">
 						<div className="space-y-12 relative font-title">
 							{universities.map((uni, index) => (
 								<div key={index} className="flex items-center gap-6 relative">
@@ -310,8 +310,12 @@ export default function Home() {
 
 									{/* University Details */}
 									<div>
-										<h3 className="md:text-2xl font-semibold">{uni.name}</h3>
-										<p className="md:text-2xl text-gray-700">{uni.ranking}</p>
+										<h3 className="md:text-xl sm:text-md text-sm font-semibold">
+											{uni.name}
+										</h3>
+										<p className="md:text-xl sm:text-md text-sm text-gray-700">
+											{uni.ranking}
+										</p>
 									</div>
 								</div>
 							))}
