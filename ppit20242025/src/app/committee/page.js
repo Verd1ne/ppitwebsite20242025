@@ -61,51 +61,51 @@ export default function CommitteeCarousel() {
 
 	// Members for the overlay
 	const members = [
-		{ id: 1, cardImage: "/CMT_Assets/BPH/Nicholas.png", department: 0 },
-		{ id: 2, cardImage: "/CMT_Assets/BPH/Jocelyn.png", department: 0 },
-		{ id: 3, cardImage: "/CMT_Assets/BPH/Christopher.png", department: 0 },
-		{ id: 4, cardImage: "/CMT_Assets/BPH/Kallista.png", department: 0 },
-		{ id: 5, cardImage: "/CMT_Assets/BPH/Christie.png", department: 0 },
-		{ id: 6, cardImage: "/CMT_Assets/BPH/Richelle.png", department: 0 },
-		{ id: 7, cardImage: "/CMT_Assets/Akad/Celine.png", department: 1 },
-		{ id: 8, cardImage: "/CMT_Assets/Akad/Ernest.png", department: 1 },
-		{ id: 9, cardImage: "/CMT_Assets/Akad/Jeanette.png", department: 1 },
-		{ id: 10, cardImage: "/CMT_Assets/Akad/Nathan.png", department: 1 },
-		{ id: 11, cardImage: "/CMT_Assets/Akad/Christopher.png", department: 1 },
-		{ id: 12, cardImage: "/CMT_Assets/IT/Verdine.png", department: 2 },
-		{ id: 13, cardImage: "/CMT_Assets/IT/Willie.png", department: 2 },
-		{ id: 14, cardImage: "/CMT_Assets/IT/Kellen.png", department: 2 },
-		{ id: 15, cardImage: "/CMT_Assets/IT/Kaylinn.png", department: 2 },
-		{ id: 16, cardImage: "/CMT_Assets/IT/Melvin.png", department: 2 },
-		{ id: 17, cardImage: "/CMT_Assets/Wirus/Edward.png", department: 3 },
-		{ id: 18, cardImage: "/CMT_Assets/Wirus/Dhyfa.png", department: 3 },
-		{ id: 19, cardImage: "/CMT_Assets/Wirus/Cheryn.png", department: 3 },
-		{ id: 20, cardImage: "/CMT_Assets/Wirus/Kesya.png", department: 3 },
-		{ id: 21, cardImage: "/CMT_Assets/Wirus/Carlo.png", department: 3 },
-		{ id: 22, cardImage: "/CMT_Assets/Wirus/Michelle.png", department: 3 },
-		{ id: 23, cardImage: "/CMT_Assets/Wirus/Avicienna.png", department: 3 },
-		{ id: 24, cardImage: "/CMT_Assets/Medpub/Patricia.png", department: 4 },
-		{ id: 25, cardImage: "/CMT_Assets/Medpub/Catherine.png", department: 4 },
-		{ id: 26, cardImage: "/CMT_Assets/Medpub/Carlene.png", department: 4 },
-		{ id: 27, cardImage: "/CMT_Assets/Medpub/Raya.png", department: 4 },
-		{ id: 28, cardImage: "/CMT_Assets/Medpub/Calvin.png", department: 4 },
-		{ id: 29, cardImage: "/CMT_Assets/Medpub/Jessica.png", department: 4 },
-		{ id: 30, cardImage: "/CMT_Assets/Medpub/Bryan.png", department: 4 },
-		{ id: 31, cardImage: "/CMT_Assets/Medpub/Jade.png", department: 4 },
-		{ id: 32, cardImage: "/CMT_Assets/Depol/Felix.png", department: 5 },
-		{ id: 33, cardImage: "/CMT_Assets/Depol/James.png", department: 5 },
-		{ id: 34, cardImage: "/CMT_Assets/Depol/Nadya.png", department: 5 },
-		{ id: 35, cardImage: "/CMT_Assets/Depol/Fidel.png", department: 5 },
-		{ id: 36, cardImage: "/CMT_Assets/Depol/Louie.png", department: 5 },
-		{ id: 37, cardImage: "/CMT_Assets/Depol/Miselle.png", department: 5 },
-		{ id: 38, cardImage: "/CMT_Assets/Depol/Vincent.png", department: 5 },
-		{ id: 39, cardImage: "/CMT_Assets/Sosbud/Felicia.png", department: 6 },
-		{ id: 40, cardImage: "/CMT_Assets/Sosbud/Brian.png", department: 6 },
-		{ id: 41, cardImage: "/CMT_Assets/Sosbud/Jessica.png", department: 6 },
-		{ id: 42, cardImage: "/CMT_Assets/Sosbud/Angelene.png", department: 6 },
-		{ id: 43, cardImage: "/CMT_Assets/Sosbud/Rionaldi.png", department: 6 },
-		{ id: 44, cardImage: "/CMT_Assets/Sosbud/Meagan.png", department: 6 },
-		{ id: 45, cardImage: "/CMT_Assets/Sosbud/Cayleen.png", department: 6 },
+		{ id: 1, cardImage: "/CMT_Assets/BPH/Nicholas.PNG", department: 0 },
+		{ id: 2, cardImage: "/CMT_Assets/BPH/Jocelyn.PNG", department: 0 },
+		{ id: 3, cardImage: "/CMT_Assets/BPH/Christopher.PNG", department: 0 },
+		{ id: 4, cardImage: "/CMT_Assets/BPH/Kallista.PNG", department: 0 },
+		{ id: 5, cardImage: "/CMT_Assets/BPH/Christie.PNG", department: 0 },
+		{ id: 6, cardImage: "/CMT_Assets/BPH/Richelle.PNG", department: 0 },
+		{ id: 7, cardImage: "/CMT_Assets/Akad/Celine.PNG", department: 1 },
+		{ id: 8, cardImage: "/CMT_Assets/Akad/Ernest.PNG", department: 1 },
+		{ id: 9, cardImage: "/CMT_Assets/Akad/Jeanette.PNG", department: 1 },
+		{ id: 10, cardImage: "/CMT_Assets/Akad/Nathan.PNG", department: 1 },
+		{ id: 11, cardImage: "/CMT_Assets/Akad/Christopher.PNG", department: 1 },
+		{ id: 12, cardImage: "/CMT_Assets/IT/Verdine.PNG", department: 2 },
+		{ id: 13, cardImage: "/CMT_Assets/IT/Willie.PNG", department: 2 },
+		{ id: 14, cardImage: "/CMT_Assets/IT/Kellen.PNG", department: 2 },
+		{ id: 15, cardImage: "/CMT_Assets/IT/Kaylinn.PNG", department: 2 },
+		{ id: 16, cardImage: "/CMT_Assets/IT/Melvin.PNG", department: 2 },
+		{ id: 17, cardImage: "/CMT_Assets/Wirus/Edward.PNG", department: 3 },
+		{ id: 18, cardImage: "/CMT_Assets/Wirus/Dhyfa.PNG", department: 3 },
+		{ id: 19, cardImage: "/CMT_Assets/Wirus/Cheryn.PNG", department: 3 },
+		{ id: 20, cardImage: "/CMT_Assets/Wirus/Kesya.PNG", department: 3 },
+		{ id: 21, cardImage: "/CMT_Assets/Wirus/Carlo.PNG", department: 3 },
+		{ id: 22, cardImage: "/CMT_Assets/Wirus/Michelle.PNG", department: 3 },
+		{ id: 23, cardImage: "/CMT_Assets/Wirus/Avicienna.PNG", department: 3 },
+		{ id: 24, cardImage: "/CMT_Assets/Medpub/Patricia.PNG", department: 4 },
+		{ id: 25, cardImage: "/CMT_Assets/Medpub/Catherine.PNG", department: 4 },
+		{ id: 26, cardImage: "/CMT_Assets/Medpub/Carlene.PNG", department: 4 },
+		{ id: 27, cardImage: "/CMT_Assets/Medpub/Raya.PNG", department: 4 },
+		{ id: 28, cardImage: "/CMT_Assets/Medpub/Calvin.PNG", department: 4 },
+		{ id: 29, cardImage: "/CMT_Assets/Medpub/Jessica.PNG", department: 4 },
+		{ id: 30, cardImage: "/CMT_Assets/Medpub/Bryan.PNG", department: 4 },
+		{ id: 31, cardImage: "/CMT_Assets/Medpub/Jade.PNG", department: 4 },
+		{ id: 32, cardImage: "/CMT_Assets/Depol/Felix.PNG", department: 5 },
+		{ id: 33, cardImage: "/CMT_Assets/Depol/James.PNG", department: 5 },
+		{ id: 34, cardImage: "/CMT_Assets/Depol/Nadya.PNG", department: 5 },
+		{ id: 35, cardImage: "/CMT_Assets/Depol/Fidel.PNG", department: 5 },
+		{ id: 36, cardImage: "/CMT_Assets/Depol/Louie.PNG", department: 5 },
+		{ id: 37, cardImage: "/CMT_Assets/Depol/Miselle.PNG", department: 5 },
+		{ id: 38, cardImage: "/CMT_Assets/Depol/Vincent.PNG", department: 5 },
+		{ id: 39, cardImage: "/CMT_Assets/Sosbud/Felicia.PNG", department: 6 },
+		{ id: 40, cardImage: "/CMT_Assets/Sosbud/Brian.PNG", department: 6 },
+		{ id: 41, cardImage: "/CMT_Assets/Sosbud/Jessica.PNG", department: 6 },
+		{ id: 42, cardImage: "/CMT_Assets/Sosbud/Angelene.PNG", department: 6 },
+		{ id: 43, cardImage: "/CMT_Assets/Sosbud/Rionaldi.PNG", department: 6 },
+		{ id: 44, cardImage: "/CMT_Assets/Sosbud/Meagan.PNG", department: 6 },
+		{ id: 45, cardImage: "/CMT_Assets/Sosbud/Cayleen.PNG", department: 6 },
 	];
 
 	// Corrected layout configurations
@@ -125,7 +125,7 @@ export default function CommitteeCarousel() {
 			<>
 				<div className="w-full rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 aspect-[3/4] max-w-[200px]">
 					<Image
-						src="/CMT_Assets/Sosbud/Cayleen.png"
+						src={member.cardImage}
 						alt={`Card for Member ${member.id}`}
 						width={200}
 						height={260}
@@ -235,7 +235,7 @@ export default function CommitteeCarousel() {
 				{/* Banner Section */}
 				<div className="relative h-[50vh] xl:h-screen w-full overflow-hidden mb-[2%] ">
 					<Image
-						src="/CMT_Assets/Full/Banner.png"
+						src="/CMT_Assets/Full/Banner.PNG"
 						alt="Banner Background"
 						fill
 						className="object-cover opacity-70"
