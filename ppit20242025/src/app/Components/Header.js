@@ -52,17 +52,17 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				<span
 					className={`block w-full h-[3px] rounded transition-transform ${
 						menuOpen ? "transform translate-y-[11px] rotate-45" : ""
-					} ${isScrolled ? "bg-black" : "bg-black"}`}
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
 				></span>
 				<span
 					className={`block w-full h-[3px] rounded transition-opacity ${
 						menuOpen ? "opacity-0" : ""
-					} ${isScrolled ? "bg-black" : "bg-black"}`}
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
 				></span>
 				<span
 					className={`block w-full h-[3px] rounded transition-transform ${
 						menuOpen ? "transform translate-y-[-11px] -rotate-45" : ""
-					} ${isScrolled ? "bg-black" : "bg-black"}`}
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
 				></span>
 			</button>
 
@@ -76,16 +76,16 @@ const Header = ({ menuOpen, toggleMenu }) => {
 			>
 				<Link
 					href="/"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold  ${
-						isScrolled ? "text-black" : "text-white"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
 					Home
 				</Link>
 				<Link
 					href="/committee"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold  ${
-						isScrolled ? "text-black" : "text-white"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
 					Committee
@@ -93,7 +93,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				<Link
 					href="/events"
 					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
-						isScrolled ? "text-black" : "text-white"
+						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
 					Events
@@ -101,7 +101,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				<Link
 					href="/faq"
 					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
-						isScrolled ? "text-black" : "text-white"
+						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
 					FAQ
