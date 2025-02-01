@@ -64,13 +64,13 @@ export default function Home() {
 					<div className="absolute inset-x-0 bottom-0 flex flex-col items-center  md:mb-[-10px]">
 						<Link
 							href="#about-us"
-							className="text-white text-4xl font-light tracking-wider mb-6 drop-shadow-lg smooth-scroll"
+							className="text-white text-4xl font-light tracking-wider mb-6 drop-shadow-lg !smooth-scroll"
 						>
 							find out more
 						</Link>
 						<Link
 							href="#about-us"
-							className="animate-bounce mb-8 drop-shadow-lg smooth-scroll"
+							className="animate-bounce mb-8 drop-shadow-lg !smooth-scroll"
 						>
 							<svg
 								width="64"
@@ -178,7 +178,11 @@ export default function Home() {
 								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-bold">
 									PPIT Shenzhen menjadi rumah kedua yang menginspirasi,
 									mendukung, dan memberdayakan pelajar Indonesia untuk mencapai
-									potensi penuh mereka.
+									potensi penuh mereka. Kami menciptakan lingkungan inklusif,
+									memfasilitasi pertumbuhan akademis dan profesional, serta
+									memperkuat jaringan kolaborasi. Dengan semangat kebersamaan,
+									kami mendorong inovasi, kepemimpinan, dan kontribusi positif
+									bagi Indonesia dan dunia.
 								</p>
 								<div className="flex items-center justify-center">
 									<Image
@@ -198,9 +202,13 @@ export default function Home() {
 									Misi
 								</h3>
 								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-bold">
-									Mempertahankan semangat dan energi yang selalu bergerak maju,
-									penuh inisiatif, dan selalu berusaha untuk mencapai yang
-									terbaik dalam segala hal.
+									Kami berkomitmen untuk terus maju dengan inisiatif dan
+									semangat tinggi, mendorong anggota PPIT Shenzhen meraih
+									keberhasilan dan memaksimalkan potensi mereka. Kami menekankan
+									pentingnya kinerja, komunikasi, dan kepercayaan dalam
+									membangun relasi yang kuat, baik internal maupun eksternal.
+									Selain itu, kami berupaya membangun jaringan alumni yang solid
+									untuk perkembangan bersama.
 								</p>
 								<div className="flex items-center justify-center">
 									<Image

@@ -21,7 +21,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 			className={`fixed top-0 w-full flex justify-between items-center p-5 text-xl z-[999] md:px-12 px-8 ${
 				isScrolled
 					? "bg-white shadow-md"
-					: "bg-gradient-to-b from-[#383737] to-transparent"
+					: "bg-gradient-to-b from-black to-transparent"
 			}`}
 		>
 			{/* Logo */}

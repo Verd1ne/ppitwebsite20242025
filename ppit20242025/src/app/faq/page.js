@@ -188,13 +188,13 @@ export default function Faq() {
 	);
 
 	return (
-		<div className="bg-slate-100">
+		<div className="bg-[#1f2023]">
 			<Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
 			<div className="w-full lg:pt-24 md:pt-20 pt-16">
-				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3">
+				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3 text-slate-100">
 					Frequently asked questions
 				</div>
-				<div className="w-full font-montserrat md:text-lg sm:text-sm text-xs text-gray-500 text-center px-6">
+				<div className="w-full font-montserrat md:text-lg sm:text-sm text-xs text-slate-100	 text-center px-6">
 					These are the most commonly asked questions about PPITSZ. <br />
 					Can't find what you're looking for?{" "}
 					<u>
@@ -209,10 +209,10 @@ export default function Faq() {
 					(category) => (
 						<div
 							key={category}
-							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-xs ${
+							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-xs text-slate-100 ${
 								selectedCategory === category
-									? "bg-black text-white"
-									: "border-black"
+									? "bg-white text-[#25141a]"
+									: "border-white"
 							}`}
 							onClick={() => setSelectedCategory(category)}
 						>
@@ -231,23 +231,26 @@ export default function Faq() {
 							className="Card flex flex-row justify-center items-center gap-3"
 							onClick={() => toggleDropdown(faq.id)}
 						>
-							<div className="Icon border-2 p-2 rounded-lg">
+							<div className="Icon border-2 p-2 rounded-lg bg-white border-white">
 								<Image src={faq.svg} alt="Icon" height={25} width={25} />
 							</div>
-							<div className="Text font-montserrat font-semibold xl:text-lg md:text-md sm:text-sm text-xs h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw]">
+							<div className="Text font-montserrat font-semibold xl:text-lg md:text-md sm:text-sm text-xs h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] text-slate-100">
 								{faq.question}
 							</div>
 							<div className="Arrow float-right cursor-pointer p-2">
 								<Image
-									src="/arrow-down.png"
+									src="/arrow-down.svg"
 									alt="Arrow"
 									height={24}
 									width={24}
+									className={`transition duration-300 ${
+										openDropdown === faq.id ? "transform -rotate-180" : ""
+									}`}
 								/>
 							</div>
 						</div>
 						<div
-							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat 2xl:text-lg xl:text-md md:text-sm text-xs lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto ${
+							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat 2xl:text-lg xl:text-md md:text-sm text-xs lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto text-slate-100 ${
 								openDropdown === faq.id
 									? "max-h-20 md:py-1 py-0.5 opacity-100"
 									: "max-h-0 py-0 opacity-0"
