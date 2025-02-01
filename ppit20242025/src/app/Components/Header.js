@@ -70,13 +70,13 @@ const Header = ({ menuOpen, toggleMenu }) => {
 			<nav
 				className={`md:flex gap-9 ${
 					menuOpen
-						? "flex flex-col absolute top-[70px] right-0 w-[45%] p-5 text-white shadow-lg z-[999]"
+						? "flex flex-col absolute top-[70px] right-0 w-[43%] p-5 text-white shadow-lg z-[999]"
 						: "hidden"
 				}`}
 			>
 				<Link
 					href="/"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+					className={`md:text-2xl text-xl hover:text-[#b30000] font-montserrat font-semibold ${
 						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
@@ -84,7 +84,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				</Link>
 				<Link
 					href="/committee"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+					className={`md:text-2xl text-xl hover:text-[#b30000] font-montserrat font-semibold ${
 						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
@@ -92,7 +92,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				</Link>
 				<Link
 					href="/events"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+					className={`md:text-2xl text-xl hover:text-[#b30000] font-montserrat font-semibold ${
 						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>
@@ -100,7 +100,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				</Link>
 				<Link
 					href="/faq"
-					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+					className={`md:text-2xl text-xl hover:text-[#b30000] font-montserrat font-semibold ${
 						isScrolled && !menuOpen ? "text-black" : "text-white"
 					}`}
 				>

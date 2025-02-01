@@ -231,7 +231,7 @@ export default function Home() {
 						<Image
 							src={BestSeller}
 							alt="Shenzhen EST. 2018 Exclusive Sweater"
-							className="w-full h-full object-cover"
+							className="w-full h-full object-contain"
 							width={400}
 							height={400}
 						/>
@@ -239,9 +239,9 @@ export default function Home() {
 				</div>
 
 				<div className="mt-12 md:mt-16 col-span-5 md:col-span-5">
-					<div className="flex flex-col lg:flex-row gap-6 md:gap-8 md:mx-24 mx-16">
+					<div className="flex flex-col lg:flex-row gap-4 md:gap-6 xl:gap-8 xl:mx-24 md:mx-16 mx-12">
 						<div className="flex flex-col">
-							<h2 className="text-[2.75rem] md:text-5xl font-black text-center md:text-left font-montserrat">
+							<h2 className="text-[2.75rem] md:text-5xl text-3xl font-black text-center md:text-left font-montserrat">
 								Merchandise
 							</h2>
 							<p className="text-xl md:text-2xl text-center md:text-left font-montserrat">
@@ -253,7 +253,7 @@ export default function Home() {
 								href="https://docs.google.com/forms/d/e/1FAIpQLSfJbSNKm60OtPAqF9Pk6TqfwXrS3LODmjnwPORwbZDtBu7nDQ/viewform?usp=pp_url"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-white font-bold xl:text-3xl text-2xl  px-8 py-3 bg-red-600 font-montserrat hover:scale-110 transition duration-300"
+								className="text-white font-bold xl:text-3xl text-2xl xl:px-6 px-4 py-3 mx-4 bg-red-600 font-montserrat hover:scale-110 transition duration-300 text-center"
 							>
 								BUY NOW
 							</Link>
