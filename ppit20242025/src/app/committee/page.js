@@ -125,7 +125,7 @@ export default function CommitteeCarousel() {
 			<>
 				<div className="w-full rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 aspect-[3/4] max-w-[200px]">
 					<Image
-						src={member.cardImage}
+						src="/CMT_Assets/Sosbud/Cayleen.png"
 						alt={`Card for Member ${member.id}`}
 						width={200}
 						height={260}
