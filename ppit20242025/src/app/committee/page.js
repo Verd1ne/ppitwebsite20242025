@@ -131,7 +131,6 @@ export default function CommitteeCarousel() {
 						height={260}
 						className="object-cover"
 						objectFit="contain"
-						priority
 					/>
 				</div>
 			</>
