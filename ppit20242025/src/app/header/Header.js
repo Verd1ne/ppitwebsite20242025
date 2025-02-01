@@ -1,38 +1,104 @@
-import React from "react";
-import styles from "./Header.module.css"; // Assuming you have a CSS module for this header component
+"use client";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 const Header = ({ menuOpen, toggleMenu }) => {
-  return (
+	const [isScrolled, setIsScrolled] = useState(false);
 
-    <header className={styles.header}>
-        <div className={styles.logo}>
-           <img src="/images/PPITSZlogoheader.png"></img>
-        </div>
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 0);
+		};
 
-        <div className={`${styles.overlay} ${menuOpen ? styles.show : ""}`} onClick={toggleMenu}></div>
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
-        <button
-          className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}
-          aria-label="Toggle navigation"
-          onClick={toggleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+	return (
+		<header
+			className={`fixed top-0 w-full flex justify-between items-center p-5 text-xl z-[999] ${
+				isScrolled ? "bg-white shadow-md" : "bg-transparent"
+			}`}
+		>
+			{/* Logo */}
+			<Link href="/">
+				<img
+					src="/images/PPITSZlogoheader.png"
+					alt="Logo"
+					className="w-[125px] h-auto object-contain"
+				/>
+			</Link>
 
-        <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-        <a href="/home">Home</a> 
-        <a href="/about">About</a> 
-        <a href="/committee">Committee</a> 
-        <a href="/events">Events</a> 
-        <a href="/living">Living</a> 
-        <a href="/faq">FAQ</a> 
+			{/* Overlay for mobile menu */}
+			<div
+				className={`fixed top-0 right-0 w-[45%] h-full bg-black/70 z-10 transition-opacity ${
+					menuOpen ? "block" : "hidden"
+				}`}
+				onClick={toggleMenu}
+			></div>
 
-        </nav>
-    </header>
-  )
+			{/* Hamburger button */}
+			<button
+				className={`flex flex-col justify-around w-8 h-8 border-none cursor-pointer z-[999] md:hidden ${
+					menuOpen ? "active" : ""
+				}`}
+				aria-label="Toggle navigation"
+				onClick={toggleMenu}
+			>
+				<span
+					className={`block w-full h-[3px] rounded transition-transform ${
+						menuOpen ? "transform translate-y-[11px] rotate-45" : ""
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
+				></span>
+				<span
+					className={`block w-full h-[3px] rounded transition-opacity ${
+						menuOpen ? "opacity-0" : ""
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
+				></span>
+				<span
+					className={`block w-full h-[3px] rounded transition-transform ${
+						menuOpen ? "transform translate-y-[-11px] -rotate-45" : ""
+					} ${isScrolled ? "bg-black" : "bg-white"}`}
+				></span>
+			</button>
+
+			{/* Navigation menu */}
+			<nav
+				className={`md:flex gap-9 ${
+					menuOpen
+						? "flex flex-col absolute top-[70px] right-0 w-[45%] p-5 text-white shadow-lg z-[999]"
+						: "hidden"
+				}`}
+			>
+				<Link
+					href="/committee"
+					className={`text-2xl font-bold hover:text-[#b30000] ${
+						menuOpen ? "text-white" : "text-black"
+					}`}
+				>
+					Committee
+				</Link>
+				<Link
+					href="/events"
+					className={`text-2xl font-bold hover:text-[#b30000] ${
+						menuOpen ? "text-white" : "text-black"
+					}`}
+				>
+					Events
+				</Link>
+				<Link
+					href="/faq"
+					className={`text-2xl font-bold hover:text-[#b30000] ${
+						menuOpen ? "text-white" : "text-black"
+					}`}
+				>
+					FAQ
+				</Link>
+			</nav>
+		</header>
+	);
 };
 
 export default Header;
