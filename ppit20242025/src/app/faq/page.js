@@ -188,9 +188,9 @@ export default function Faq() {
 	);
 
 	return (
-		<>
+		<div className="bg-slate-100">
 			<Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
-			<div className="w-full mt-20">
+			<div className="w-full lg:pt-24 md:pt-20 pt-16">
 				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3">
 					Frequently asked questions
 				</div>
@@ -221,7 +221,7 @@ export default function Faq() {
 					)
 				)}
 			</div>
-			<div className="FAQS flex flex-col justify-center items-center w-full gap-4 lg:mb-16 md:mb-12 mb-8">
+			<div className="FAQS flex flex-col justify-center items-center w-full gap-4 lg:pb-16 md:pb-12 pb-8">
 				{filteredFaqs.map((faq) => (
 					<div
 						key={faq.id}
@@ -258,6 +258,6 @@ export default function Faq() {
 					</div>
 				))}
 			</div>
-		</>
+		</div>
 	);
 }

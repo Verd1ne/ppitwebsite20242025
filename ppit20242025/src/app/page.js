@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Header from "./Components/Header";
-import PPIT from "../../public/Home/PPIT.jpg";
+import PPIT from "../../public/Home/PPIT.png";
 import AboutImage from "../../public/Home/about-image.JPG";
 import Vision from "../../public/Home/vision.png";
 import Mission from "../../public/Home/mission.png";

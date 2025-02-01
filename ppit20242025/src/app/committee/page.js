@@ -259,7 +259,7 @@ export default function CommitteeCarousel() {
 						<button
 							key={section.id}
 							onClick={() => setActiveSection(index)}
-							className={`px-3 md:px-6 py-1 lg:text-xl md:text-md text-sm rounded-full font-montserrat ${
+							className={`px-3 md:px-6 py-1 xl:text-xl lg:text-lg md:text-md text-sm rounded-full font-montserrat lg:pb-[-30px] md:pb-[-20px] pb-[-10px] font-semibold ${
 								activeSection === index
 									? "bg-black border-white border-[2px]"
 									: "bg-black hover:bg-white hover:text-black"

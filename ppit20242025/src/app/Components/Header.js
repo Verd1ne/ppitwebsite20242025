@@ -19,7 +19,9 @@ const Header = ({ menuOpen, toggleMenu }) => {
 	return (
 		<header
 			className={`fixed top-0 w-full flex justify-between items-center p-5 text-xl z-[999] md:px-12 px-8 ${
-				isScrolled ? "bg-white shadow-md" : "bg-transparent"
+				isScrolled
+					? "bg-white shadow-md"
+					: "bg-gradient-to-b from-[#383737] to-transparent"
 			}`}
 		>
 			{/* Logo */}
@@ -73,25 +75,33 @@ const Header = ({ menuOpen, toggleMenu }) => {
 				}`}
 			>
 				<Link
+					href="/"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold  ${
+						isScrolled ? "text-black" : "text-white"
+					}`}
+				>
+					Home
+				</Link>
+				<Link
 					href="/committee"
-					className={`text-2xl font-bold hover:text-[#b30000] font-montserrat ${
-						menuOpen ? "text-white" : "text-black"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold  ${
+						isScrolled ? "text-black" : "text-white"
 					}`}
 				>
 					Committee
 				</Link>
 				<Link
 					href="/events"
-					className={`text-2xl font-bold hover:text-[#b30000] font-montserrat ${
-						menuOpen ? "text-white" : "text-black"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+						isScrolled ? "text-black" : "text-white"
 					}`}
 				>
 					Events
 				</Link>
 				<Link
 					href="/faq"
-					className={`text-2xl font-bold hover:text-[#b30000] font-montserrat ${
-						menuOpen ? "text-white" : "text-black"
+					className={`text-2xl hover:text-[#b30000] font-montserrat font-semibold ${
+						isScrolled ? "text-black" : "text-white"
 					}`}
 				>
 					FAQ
