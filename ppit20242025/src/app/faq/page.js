@@ -9,9 +9,9 @@ export default function Faq() {
 	const [selectedCategory, setSelectedCategory] = useState("General");
 	const [menuOpen, setMenuOpen] = useState(false); // Track the state of the menu
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // Toggle the menu visibility
-  };
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen); // Toggle the menu visibility
+	};
 
 	const toggleDropdown = (index) => {
 		setOpenDropdown(openDropdown === index ? null : index);
@@ -189,12 +189,12 @@ export default function Faq() {
 
 	return (
 		<>
-			<Header menuOpen={menuOpen} toggleMenu={toggleMenu}/>
-			<div className="w-full">
+			<Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
+			<div className="w-full mt-20">
 				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3">
 					Frequently asked questions
 				</div>
-				<div className="w-full font-montserrat md:text-lg sm:text-sm text-xs text-gray-500 text-center">
+				<div className="w-full font-montserrat md:text-lg sm:text-sm text-xs text-gray-500 text-center px-6">
 					These are the most commonly asked questions about PPITSZ. <br />
 					Can't find what you're looking for?{" "}
 					<u>
@@ -204,12 +204,12 @@ export default function Faq() {
 					</u>
 				</div>
 			</div>
-			<div className="Options font-montserrat font-semibold flex flex-row sm:gap-4 gap-2 lg:mt-10 md:mt-8 sm:mt-6 mt-4 md:mb-6 sm:mb-4 mb-3 w-full justify-center">
+			<div className="Options font-montserrat font-semibold flex flex-row sm:gap-4 gap-1 lg:mt-10 md:mt-8 sm:mt-6 mt-4 md:mb-6 sm:mb-4 mb-3 w-full justify-center">
 				{["General", "Membership", "Collaboration", "Living"].map(
 					(category) => (
 						<div
 							key={category}
-							className={`border-2 rounded-full py-1.5 sm:px-4 px-3 cursor-pointer md:text-lg sm:text-md text-xs ${
+							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-xs ${
 								selectedCategory === category
 									? "bg-black text-white"
 									: "border-black"
@@ -221,7 +221,7 @@ export default function Faq() {
 					)
 				)}
 			</div>
-			<div className="FAQS flex flex-col justify-center items-center w-full gap-4">
+			<div className="FAQS flex flex-col justify-center items-center w-full gap-4 lg:mb-16 md:mb-12 mb-8">
 				{filteredFaqs.map((faq) => (
 					<div
 						key={faq.id}
