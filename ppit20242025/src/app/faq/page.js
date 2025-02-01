@@ -2,10 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Header from "../Components/Header";
 
 export default function Faq() {
 	const [openDropdown, setOpenDropdown] = useState(null);
 	const [selectedCategory, setSelectedCategory] = useState("General");
+	const [menuOpen, setMenuOpen] = useState(false); // Track the state of the menu
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu visibility
+  };
 
 	const toggleDropdown = (index) => {
 		setOpenDropdown(openDropdown === index ? null : index);
@@ -182,7 +188,8 @@ export default function Faq() {
 	);
 
 	return (
-		<div>
+		<>
+			<Header menuOpen={menuOpen} toggleMenu={toggleMenu}/>
 			<div className="w-full">
 				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3">
 					Frequently asked questions
@@ -251,6 +258,6 @@ export default function Faq() {
 					</div>
 				))}
 			</div>
-		</div>
+		</>
 	);
 }

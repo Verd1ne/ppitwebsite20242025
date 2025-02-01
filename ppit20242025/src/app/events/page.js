@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Header from "../header/Header"; // Import the Header component
+import Header from "../Components/Header"; // Import the Header component
 import styles from "./Events.module.css";
 import { useRef, useState, useEffect } from "react";
 

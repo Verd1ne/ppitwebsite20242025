@@ -1,8 +1,16 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Header from "../Components/Header";
 
 export default function CommitteeCarousel() {
+  const [menuOpen, setMenuOpen] = useState(false); // Track the state of the menu
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu visibility
+  };
+
+
   const [activeSection, setActiveSection] = useState(0);
   const [showOverlay, setShowOverlay] = useState(false);
 
@@ -11,7 +19,7 @@ export default function CommitteeCarousel() {
     { id: 0, title: "BPH", description: "Badan\nPengurus\nHarian", image: "/CMT_Assets/Full/BPH.PNG" },
     { id: 1, title: "AKAD", description: "Akademis", image: "/CMT_Assets/Full/Akad.PNG" },
     { id: 2, title: "IT", description: "Informasi\nTeknologi", image: "/CMT_Assets/Full/IT.PNG" },
-    { id: 3, title: "WIRUS", description: "Kewirausahaan", image: "/CMT_Assets/Full/Wirus.PNG" },
+    { id: 3, title: "WIRUS", description: "Wirausaha ", image: "/CMT_Assets/Full/Wirus.PNG" },
     { id: 4, title: "MEDPUB", description: "Media\nPublikasi", image: "/CMT_Assets/Full/Medpub.PNG" },
     { id: 5, title: "DEPOL", description: "Olahraga\nPemuda", image: "/CMT_Assets/Full/Depol.PNG" },
     { id: 6, title: "SOSBUD", description: "Sosial\nBudaya", image: "/CMT_Assets/Full/Sosbud.PNG" },
@@ -80,16 +88,19 @@ export default function CommitteeCarousel() {
   // Member card component with responsive design
   function MemberCard({ member }) {
     return (
-      <div className="w-full rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 aspect-[3/4] max-w-[200px]">
-        <Image
-          src={member.cardImage}
-          alt={`Card for Member ${member.id}`}
-          width={200}
-          height={260}
-          className="object-cover"
-          objectFit="contain"
-        />
-      </div>
+      <>
+      
+        <div className="w-full rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 aspect-[3/4] max-w-[200px]">
+          <Image
+            src={member.cardImage}
+            alt={`Card for Member ${member.id}`}
+            width={200}
+            height={260}
+            className="object-cover"
+            objectFit="contain"
+          />
+        </div>
+      </>
     );
   }
 
@@ -183,92 +194,95 @@ export default function CommitteeCarousel() {
   }
 
   return (
-    <div className="bg-black text-white font-[500] font-montserrat">
-      {/* Banner Section */}
-      <div className="relative h-[50vh] xl:h-screen w-full overflow-hidden mb-[2%] ">
-        <Image
-          src="/CMT_Assets/Full/Banner.png"
-          alt="Banner Background"
-          fill
-          className="object-cover opacity-70"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-20" />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">
-            <span className="block text-4xl md:text-6xl sm:text-4xl -mb-2 md:-mb-4 shadow-md">
-              meet the
-            </span>
-            <span className="block text-6xl md:text-8xl sm:text-6xl -mt-2 md:-mt-4">
-              committee
-            </span>
-          </h1>
-        </div>
-      </div>
-
-      {/* Navigation Buttons */}
-      <div className=" flex flex-wrap justify-center space-x-5 md:space-x-4 mt-10 xl:mt-0 mb-0 xl:mb-3 w-full md:px-2 xl:px-0">
-        {sections.map((section, index) => (
-          <button
-            key={section.id}
-            onClick={() => setActiveSection(index)}
-            className={`px-3 md:px-6 py-1 text-sm rounded-full ${
-              activeSection === index
-                ? "bg-black border-white border-[2px]"
-                : "bg-black hover:bg-white hover:text-black"
-            }`}
-          >
-            {section.title}
-          </button>
-        ))}
-      </div>
-
-      {/* Main Content */}  
-      <div className="flex flex-col md:flex-row items-center justify-center xl:pl-[8%] xl:pr-[2%]  pb-7 md:pb-0 ">
-        <div className="relative w-[60vh] h-[40vh] xl:w-[70%] xl:h-[80vh] overflow-hidden rounded-lg shadow-lg">
-          {sections.map((section, index) => (
-            <Image
-              key={section.id}
-              src={section.image}
-              alt={`Image for ${section.description}`}
-              fill
-              className={`absolute object-cover transition-opacity duration-400 ease-in-out ${
-                activeSection === index ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col  items-center md:items-start w-[50%] space-y-4">
-          <h2 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center md:text-left leading-tight whitespace-nowrap md:whitespace-pre-line">
-            {sections[activeSection].description}
-          </h2>
-          <button
-            onClick={() => setShowOverlay(true)}
-            className="px-6 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-700"
-          >
-            view members
-          </button>
-        </div>
-      </div>
-
-      {/* Overlay Section */}
-      {showOverlay && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
-          onClick={() => setShowOverlay(false)}
-        >
-          <div className="p-2 max-w-5xl w-full mx-auto">
-            {departmentLayouts[activeSection] && (
-              <Layout
-                type={departmentLayouts[activeSection].type}
-                members={members
-                  .filter((member) => member.department === activeSection)
-                  .sort((a, b) => a.id - b.id)
-                }
-              />
-            )}            
+    <>
+      <Header menuOpen={menuOpen} toggleMenu={toggleMenu}/>
+      <div className="bg-black text-white font-[500] font-montserrat">
+        {/* Banner Section */}
+        <div className="relative h-[50vh] xl:h-screen w-full overflow-hidden mb-[2%] ">
+          <Image
+            src="/CMT_Assets/Full/Banner.png"
+            alt="Banner Background"
+            fill
+            className="object-cover opacity-70"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20" />
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+              <span className="block text-4xl md:text-6xl sm:text-4xl -mb-2 md:-mb-4 shadow-md">
+                meet the
+              </span>
+              <span className="block text-6xl md:text-8xl sm:text-6xl -mt-2 md:-mt-4">
+                committee
+              </span>
+            </h1>
           </div>
         </div>
-      )}      
-    </div>
+
+        {/* Navigation Buttons */}
+        <div className=" flex flex-wrap justify-center space-x-5 md:space-x-4 mt-10 xl:mt-0 mb-0 xl:mb-3 w-full md:px-2 xl:px-0">
+          {sections.map((section, index) => (
+            <button
+              key={section.id}
+              onClick={() => setActiveSection(index)}
+              className={`px-3 md:px-6 py-1 text-sm rounded-full ${
+                activeSection === index
+                  ? "bg-black border-white border-[2px]"
+                  : "bg-black hover:bg-white hover:text-black"
+              }`}
+            >
+              {section.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Main Content */}  
+        <div className="flex flex-col md:flex-row items-center justify-center xl:pl-[8%] xl:pr-[2%]  pb-7 md:pb-0 ">
+          <div className="relative w-[60vh] h-[40vh] xl:w-[70%] xl:h-[80vh] overflow-hidden rounded-lg shadow-lg">
+            {sections.map((section, index) => (
+              <Image
+                key={section.id}
+                src={section.image}
+                alt={`Image for ${section.description}`}
+                fill
+                className={`absolute object-cover transition-opacity duration-400 ease-in-out ${
+                  activeSection === index ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col  items-center md:items-start w-[50%] space-y-4">
+            <h2 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center md:text-left leading-tight whitespace-nowrap md:whitespace-pre-line">
+              {sections[activeSection].description}
+            </h2>
+            <button
+              onClick={() => setShowOverlay(true)}
+              className="px-6 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-700"
+            >
+              view members
+            </button>
+          </div>
+        </div>
+
+        {/* Overlay Section */}
+        {showOverlay && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
+            onClick={() => setShowOverlay(false)}
+          >
+            <div className="p-2 max-w-5xl w-full mx-auto">
+              {departmentLayouts[activeSection] && (
+                <Layout
+                  type={departmentLayouts[activeSection].type}
+                  members={members
+                    .filter((member) => member.department === activeSection)
+                    .sort((a, b) => a.id - b.id)
+                  }
+                />
+              )}            
+            </div>
+          </div>
+        )}      
+      </div>
+    </>
   );
 }
