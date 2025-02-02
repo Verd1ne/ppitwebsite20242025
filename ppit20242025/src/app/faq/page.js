@@ -234,7 +234,7 @@ export default function Faq() {
 							<div className="Icon border-2 p-2 rounded-lg bg-white border-white">
 								<Image src={faq.svg} alt="Icon" height={25} width={25} />
 							</div>
-							<div className="Text font-montserrat font-semibold xl:text-lg md:text-md sm:text-sm text-sm h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] text-slate-100">
+							<div className="Text font-montserrat font-semibold lg:text-xl md:text-lg sm:text-md text-sm h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] text-slate-100">
 								{faq.question}
 							</div>
 							<div className="Arrow float-right cursor-pointer p-2">
@@ -250,7 +250,7 @@ export default function Faq() {
 							</div>
 						</div>
 						<div
-							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat 2xl:text-lg xl:text-md md:text-sm text-sm lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto text-slate-100 ${
+							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat lg:text-xl md:text-lg sm:text-md text-sm lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto text-slate-100 ${
 								openDropdown === faq.id
 									? "max-h-20 md:py-1 py-0.5 opacity-100"
 									: "max-h-0 py-0 opacity-0"
