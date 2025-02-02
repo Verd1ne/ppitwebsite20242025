@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from "react";
 export default function Home() {
 	const slides = [
 		{
-			src: "/images/image1.jpg",
+			src: "/images/image1.JPEG",
 			title: "Internal Bonding",
 			description:
 				"BPH PPITSZ mengadakan acara internal bonding di Xiaomeisha Beach Shenzhen (小梅沙) untuk menguatkan relasi antara sesama anggota PPITSZ.",

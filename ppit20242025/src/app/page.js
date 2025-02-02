@@ -139,14 +139,14 @@ export default function Home() {
 						{/* New Statistics Section */}
 						<div className="mt-8 flex space-x-16">
 							<div className="flex flex-col items-start">
-								<div className="text-5xl font-[420]">6+</div>
-								<div className="text-gray-600 text-center font-montserrat">
+								<div className="text-5xl font-montserrat font-[420]">6+</div>
+								<div className="text-gray-600 font-montserrat">
 									Tahun Berdiri
 								</div>
 							</div>
 							<div className="flex flex-col items-start">
-								<div className="text-5xl font-[420]">450+</div>
-								<div className="text-gray-600 text-center font-montserrat">
+								<div className="text-5xl font-montserrat font-[420]">450+</div>
+								<div className="text-gray-600 font-montserrat">
 									Mahasiswa di Shenzhen
 								</div>
 							</div>
@@ -271,7 +271,7 @@ export default function Home() {
 									height={200}
 								/>
 								<div className="flex flex-col items-center justify-center p-2">
-									<h3 className="font-bold text-lg font-montserrat">
+									<h3 className="font-bold text-center text-lg font-montserrat">
 										{item.name}
 									</h3>
 									<p className="font-bold text-lg text-red-600 font-montserrat">
