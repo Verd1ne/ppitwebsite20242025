@@ -255,12 +255,12 @@ export default function CommitteeCarousel() {
 				</div>
 
 				{/* Navigation Buttons */}
-				<div className=" flex flex-wrap justify-center space-x-5 md:space-x-4 mt-10 xl:mt-0 mb-0 xl:mb-3 w-full md:px-2 xl:px-0">
+				<div className="flex flex-wrap justify-center space-x-5 md:space-x-4 mt-10 xl:mt-0 mb-0 xl:mb-3 md:w-[80%] w-[90%] mx-auto md:px-2 xl:px-0">
 					{sections.map((section, index) => (
 						<button
 							key={section.id}
 							onClick={() => setActiveSection(index)}
-							className={`px-3 md:px-6 py-1 xl:text-xl lg:text-lg md:text-md text-sm rounded-full font-montserrat lg:pb-[-30px] md:pb-[-20px] pb-[-10px] font-semibold ${
+							className={`px-3 md:px-6 py-1 lg:text-xl md:text-lg sm:text-md text-sm rounded-full font-montserrat lg:pb-[-30px] md:pb-[-20px] pb-[-10px] font-semibold ${
 								activeSection === index
 									? "bg-black border-white border-[2px]"
 									: "bg-black hover:bg-white hover:text-black"
@@ -272,22 +272,22 @@ export default function CommitteeCarousel() {
 				</div>
 
 				{/* Main Content */}
-				<div className="flex flex-col md:flex-row items-center justify-center xl:pl-[8%] xl:pr-[2%] pb-7 md:pb-0 ">
-					<div className="relative w-[60vh] h-[40vh] xl:w-[70%] xl:h-[80vh] overflow-hidden rounded-lg shadow-lg">
+				<div className="flex xl:flex-row flex-col items-center justify-center xl:px-[8%] lg:pb-16 pb-12 mt-2">
+					<div className="relative w-[85vw] h-[38vh] sm:w-[55vw] sm:h-[45vh] md:w-[60vw] md:h-[50vh] lg:h-[65vh] xl:w-[70vw] xl:h-[80vh] overflow-hidden rounded-lg shadow-lg flex items-center justify-center xl:ml-auto xl:mr-0 mx-auto">
 						{sections.map((section, index) => (
 							<Image
 								key={section.id}
 								src={section.image}
 								alt={`Image for ${section.description}`}
 								fill
-								className={`absolute object-cover transition-opacity duration-400 ease-in-out ${
+								className={`object-cover transition-opacity duration-400 ease-in-out ${
 									activeSection === index ? "opacity-100" : "opacity-0"
 								}`}
 							/>
 						))}
 					</div>
-					<div className="flex flex-col  items-center md:items-start w-[50%] space-y-4">
-						<h2 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center md:text-left leading-tight whitespace-nowrap md:whitespace-pre-line">
+					<div className="flex flex-col items-center justify-center xl:items-start md:w-[50%] w-[85%] space-y-4">
+						<h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-center xl:text-left leading-tight w-full">
 							{sections[activeSection].description}
 						</h2>
 						<button

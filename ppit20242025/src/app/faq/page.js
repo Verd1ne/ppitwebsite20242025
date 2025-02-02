@@ -191,10 +191,10 @@ export default function Faq() {
 		<div className="bg-[#1f2023]">
 			<Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
 			<div className="w-full lg:pt-24 md:pt-20 pt-16">
-				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-xl tracking-wide text-center mt-8 py-3 text-slate-100">
+				<div className="w-full font-montserrat font-bold xl:text-4xl md:text-3xl sm:text-2xl text-2xl tracking-wide text-center mt-8 py-3 text-slate-100">
 					Frequently asked questions
 				</div>
-				<div className="w-full font-montserrat md:text-lg sm:text-sm text-xs text-slate-100	 text-center px-6">
+				<div className="w-full font-montserrat md:text-lg sm:text-sm text-sm text-slate-100	 text-center px-6">
 					These are the most commonly asked questions about PPITSZ. <br />
 					Can't find what you're looking for?{" "}
 					<u>
@@ -204,12 +204,12 @@ export default function Faq() {
 					</u>
 				</div>
 			</div>
-			<div className="Options font-montserrat font-semibold flex flex-row sm:gap-4 gap-1 lg:mt-10 md:mt-8 sm:mt-6 mt-4 md:mb-6 sm:mb-4 mb-3 w-full justify-center">
+			<div className="Options font-montserrat font-semibold sm:flex sm:flex-row grid grid-cols-2 sm:gap-4 gap-y-2 gap-x-2 lg:mt-10 md:mt-8 sm:mt-6 mt-4 md:mb-6 sm:mb-4 mb-3 xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%] w-[70%] justify-center mx-auto">
 				{["General", "Membership", "Collaboration", "Living"].map(
 					(category) => (
 						<div
 							key={category}
-							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-xs ${
+							className={`border-2 rounded-full py-1.5 sm:px-4 px-2 cursor-pointer md:text-lg sm:text-md text-sm sm:w-auto mx-auto w-full text-center ${
 								selectedCategory === category
 									? "bg-white text-[#000]"
 									: "border-white text-[#FFF]"
@@ -234,7 +234,7 @@ export default function Faq() {
 							<div className="Icon border-2 p-2 rounded-lg bg-white border-white">
 								<Image src={faq.svg} alt="Icon" height={25} width={25} />
 							</div>
-							<div className="Text font-montserrat font-semibold xl:text-lg md:text-md sm:text-sm text-xs h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] text-slate-100">
+							<div className="Text font-montserrat font-semibold xl:text-lg md:text-md sm:text-sm text-sm h-inherit lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] text-slate-100">
 								{faq.question}
 							</div>
 							<div className="Arrow float-right cursor-pointer p-2">
@@ -250,7 +250,7 @@ export default function Faq() {
 							</div>
 						</div>
 						<div
-							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat 2xl:text-lg xl:text-md md:text-sm text-xs lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto text-slate-100 ${
+							className={`DROPDOWN overflow-hidden transition-all duration-500 ease-in-out font-montserrat 2xl:text-lg xl:text-md md:text-sm text-sm lg:w-[45vw] md:w-[55vw] sm:w-[65vw] w-[60vw] pl-[2px] mx-auto text-slate-100 ${
 								openDropdown === faq.id
 									? "max-h-20 md:py-1 py-0.5 opacity-100"
 									: "max-h-0 py-0 opacity-0"

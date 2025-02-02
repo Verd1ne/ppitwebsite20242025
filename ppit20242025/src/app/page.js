@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Header from "./Components/Header";
 import PPIT from "../../public/Home/PPIT.png";
+import PPITTablet from "../../public/Home/PPITtablet.png";
+import PPITMobile from "../../public/Home/PPITmobile.png";
 import AboutImage from "../../public/Home/about-image.JPG";
 import Vision from "../../public/Home/vision.png";
 import Mission from "../../public/Home/mission.png";
@@ -52,11 +54,23 @@ export default function Home() {
 
 			{/* Hero Section */}
 			<div className="relative font-montserrat">
-				<div className="relative md:h-[100vh] h-[80vh] ">
+				<div className="relative md:h-[100vh] h-[90vh] ">
 					<Image
 						src={PPIT}
 						alt="PPIT Hero"
-						className="w-full h-full object-cover"
+						className="lg:block hidden w-full h-full object-cover"
+						priority
+					/>
+					<Image
+						src={PPITTablet}
+						alt="PPIT Hero"
+						className="lg:hidden sm:block hidden w-full h-full object-cover"
+						priority
+					/>
+					<Image
+						src={PPITMobile}
+						alt="PPIT Hero"
+						className="sm:hidden block w-full h-full object-cover"
 						priority
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -139,13 +153,17 @@ export default function Home() {
 						{/* New Statistics Section */}
 						<div className="mt-8 flex space-x-16">
 							<div className="flex flex-col items-start">
-								<div className="text-5xl font-montserrat font-[420]">6+</div>
+								<div className="lg:text-5xl md:text-4xl text-3xl font-montserrat font-[420]">
+									6+
+								</div>
 								<div className="text-gray-600 font-montserrat">
 									Tahun Berdiri
 								</div>
 							</div>
 							<div className="flex flex-col items-start">
-								<div className="text-5xl font-montserrat font-[420]">450+</div>
+								<div className="lg:text-5xl md:text-4xl text-3xl font-montserrat font-[420]">
+									450+
+								</div>
 								<div className="text-gray-600 font-montserrat">
 									Mahasiswa di Shenzhen
 								</div>
@@ -156,7 +174,7 @@ export default function Home() {
 						<Image
 							src={AboutImage}
 							alt="About Us Image"
-							className="rounded-none w-full h-auto max-w-[1000px] shadow-lg"
+							className="rounded-none md:w-full sm:w-[65%] w-[75%] mx-auto h-auto max-w-[1000px] shadow-lg"
 						/>
 					</div>
 				</div>
@@ -171,8 +189,8 @@ export default function Home() {
 						</h2>
 						<div className="flex flex-col md:flex-row">
 							<div className="flex-1 pr-4 mb-8 md:mb-0">
-								<h3 className="text-2xl lg:text-3xl font-bold text-red-600 mb-4 flex items-center">
-									<span className="text-red-600 mr-2 font-montserrat">►</span>
+								<h3 className="text-2xl lg:text-3xl font-bold font-montserrat text-red-600 mb-4 flex items-center">
+									<span className="text-red-600 mr-2">►</span>
 									Visi
 								</h3>
 								<p className="text-gray-700 text-xl lg:text-2xl font-montserrat font-medium">
@@ -195,7 +213,7 @@ export default function Home() {
 							</div>
 							<div className="md:border-l-2 border-gray-300 mx-4" />
 							<div className="flex-1 md:pl-4 mb-8 md:mb-0">
-								<h3 className="text-2xl lg:text-3xl font-bold text-red-600 mb-4 flex items-center">
+								<h3 className="text-2xl lg:text-3xl font-bold font-montserrat text-red-600 mb-4 flex items-center">
 									<span className="text-red-600 mr-2 font-montserrat font-bold">
 										►
 									</span>
@@ -227,7 +245,7 @@ export default function Home() {
 			{/* Merchandise Section */}
 			<section className="grid grid-cols-1 lg:grid-cols-8">
 				<div className="col-span-3 md:col-span-3">
-					<div className="h-full">
+					<div className="h-full lg:w-full sm:w-[65%] w-full mx-auto">
 						<Image
 							src={BestSeller}
 							alt="Shenzhen EST. 2018 Exclusive Sweater"
@@ -241,10 +259,10 @@ export default function Home() {
 				<div className="mt-12 md:mt-16 col-span-5 md:col-span-5">
 					<div className="flex flex-col lg:flex-row gap-4 md:gap-6 xl:gap-8 xl:mx-24 md:mx-16 mx-12">
 						<div className="flex flex-col">
-							<h2 className="text-[2.75rem] md:text-5xl text-3xl font-black text-center md:text-left font-montserrat">
+							<h2 className="md:text-5xl text-4xl font-black text-center lg:text-left font-montserrat">
 								Merchandise
 							</h2>
-							<p className="text-xl md:text-2xl text-center md:text-left font-montserrat">
+							<p className="text-xl md:text-2xl text-center lg:text-left font-montserrat">
 								get them while they're still in stock!
 							</p>
 						</div>
