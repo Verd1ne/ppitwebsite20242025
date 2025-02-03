@@ -73,7 +73,7 @@ export default function Home() {
 						src={PPITTablet}
 						alt="PPIT Hero"
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
-						quality={70}
+						quality={75}
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
