@@ -67,14 +67,13 @@ export default function Home() {
 						alt="PPIT Hero"
 						className="lg:block hidden w-full h-full object-cover"
 						priority
-						quality={100}
+						quality={90}
 					/>
 					<Image
 						src={PPITTablet}
 						alt="PPIT Hero"
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
-						priority
-						quality={100}
+						quality={70}
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
