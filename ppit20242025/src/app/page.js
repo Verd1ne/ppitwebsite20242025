@@ -54,7 +54,7 @@ export default function Home() {
 
 			{/* Hero Section */}
 			<div className="relative font-montserrat">
-				<div className="relative md:h-[100vh] h-[90vh] ">
+				<div className="relative md:h-[100vh] h-[90vh] overflow-hidden">
 					<Image
 						src={PPIT}
 						alt="PPIT Hero"
@@ -74,7 +74,7 @@ export default function Home() {
 						alt="PPIT Hero"
 						className="sm:hidden block w-full h-full object-cover"
 						priority
-						quality={100}
+						quality={90}
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
@@ -211,6 +211,7 @@ export default function Home() {
 										className="mt-6 md:mt-12 w-[25%] h-auto object-cover"
 										width={200}
 										height={200}
+										alt="Vision"
 									/>
 								</div>
 							</div>
@@ -237,6 +238,7 @@ export default function Home() {
 										className="mt-6 md:mt-12 w-[25%] h-auto object-cover"
 										width={200}
 										height={200}
+										alt="Mission"
 									/>
 								</div>
 							</div>
