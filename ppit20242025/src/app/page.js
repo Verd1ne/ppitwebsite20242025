@@ -56,6 +56,13 @@ export default function Home() {
 			<div className="relative font-montserrat">
 				<div className="relative md:h-[100vh] h-[90vh] overflow-hidden">
 					<Image
+						src={PPITMobile}
+						alt="PPIT Hero"
+						className="sm:hidden block w-full h-full object-cover"
+						priority
+						quality={80}
+					/>
+					<Image
 						src={PPIT}
 						alt="PPIT Hero"
 						className="lg:block hidden w-full h-full object-cover"
@@ -68,13 +75,6 @@ export default function Home() {
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
 						priority
 						quality={100}
-					/>
-					<Image
-						src={PPITMobile}
-						alt="PPIT Hero"
-						className="sm:hidden block w-full h-full object-cover"
-						priority
-						quality={90}
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
