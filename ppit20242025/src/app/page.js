@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import PPIT from "../../public/Home/PPIT.png";
 import PPITTablet from "../../public/Home/PPITtablet.png";
-import PPITMobile from "../../public/Home/PPITmobile.png";
+import PPITMobile from "../../public/Home/PPITmobile.webp";
 import AboutImage from "../../public/Home/about-image.JPG";
 import Vision from "../../public/Home/vision.png";
 import Mission from "../../public/Home/mission.png";
