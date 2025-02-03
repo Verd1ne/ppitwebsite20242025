@@ -27,7 +27,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
 			{/* Logo */}
 			<Link href="/">
 				<img
-					src="/images/PPITSZlogoheader.png"
+					src="/images/PPITSZlogoheader.webp"
 					alt="Logo"
 					className="w-[125px] h-auto object-contain"
 				/>

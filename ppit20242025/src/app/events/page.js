@@ -8,19 +8,19 @@ import { useRef, useState, useEffect } from "react";
 export default function Home() {
 	const slides = [
 		{
-			src: "/images/image1.JPEG",
+			src: "/images/image1.webp",
 			title: "Internal Bonding",
 			description:
 				"BPH PPITSZ mengadakan acara internal bonding di Xiaomeisha Beach Shenzhen (小梅沙) untuk menguatkan relasi antara sesama anggota PPITSZ.",
 		},
 		{
-			src: "/images/image2.jpg",
+			src: "/images/image2.webp",
 			title: "NANTARA",
 			description:
 				"NANTARA <Night at Nusantara> adalah festival meriah yang dipenuhi barang-barang preloved, pertunjukan bakat yang luar biasa, dan cita rasa asli Indonesia! Selain itu, ada juga permainan tradisional Indonesia dan arena permainan untuk memadukan kesenangan dan nostalgia.",
 		},
 		{
-			src: "/images/image3.jpg",
+			src: "/images/image3.webp",
 			title: "Upcoming Events",
 			description: "Stay tuned for upcoming events!",
 		},

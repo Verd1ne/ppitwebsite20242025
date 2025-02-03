@@ -3,16 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 import Header from "./Components/Header";
 import PPIT from "../../public/Home/PPIT.webp";
-import PPITTablet from "../../public/Home/PPITtablet.png";
+import PPITTablet from "../../public/Home/PPITtablet.webp";
 import PPITMobile from "../../public/Home/PPITmobile.webp";
-import AboutImage from "../../public/Home/about-image.JPG";
-import Vision from "../../public/Home/vision.png";
-import Mission from "../../public/Home/mission.png";
-import BestSeller from "../../public/Home/merch.jpg";
-import SweaterImage from "../../public/Home/sweater.png";
-import StarShirt from "../../public/Home/star-shirt.png";
-import ShenzhenShirt from "../../public/Home/shenzhen-shirt.png";
-import Cap from "../../public/Home/cap.png";
+import AboutImage from "../../public/Home/about-image.webp";
+import Vision from "../../public/Home/vision.webp";
+import Mission from "../../public/Home/mission.webp";
+import BestSeller from "../../public/Home/merch.webp";
+import SweaterImage from "../../public/Home/sweater.webp";
+import StarShirt from "../../public/Home/star-shirt.webp";
+import ShenzhenShirt from "../../public/Home/shenzhen-shirt.webp";
+import Cap from "../../public/Home/cap.webp";
 import Link from "next/link";
 
 export default function Home() {
