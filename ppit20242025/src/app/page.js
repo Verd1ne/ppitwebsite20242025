@@ -60,21 +60,22 @@ export default function Home() {
 						alt="PPIT Hero"
 						className="sm:hidden block w-full h-full object-cover"
 						priority
-						quality={80}
+						quality={100}
 					/>
 					<Image
 						src={PPIT}
 						alt="PPIT Hero"
 						className="lg:block hidden w-full h-full object-cover"
 						priority
-						quality={90}
+						quality={100}
 					/>
-					{/* <Image
+					<Image
 						src={PPITTablet}
 						alt="PPIT Hero"
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
+						priority
 						quality={70}
-					/> */}
+					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
 					<div className="absolute inset-x-0 bottom-0 flex flex-col items-center  md:mb-[-10px]">
