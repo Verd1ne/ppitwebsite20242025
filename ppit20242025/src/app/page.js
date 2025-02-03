@@ -60,18 +60,21 @@ export default function Home() {
 						alt="PPIT Hero"
 						className="lg:block hidden w-full h-full object-cover"
 						priority
+						quality={100}
 					/>
 					<Image
 						src={PPITTablet}
 						alt="PPIT Hero"
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
 						priority
+						quality={100}
 					/>
 					<Image
 						src={PPITMobile}
 						alt="PPIT Hero"
 						className="sm:hidden block w-full h-full object-cover"
 						priority
+						quality={100}
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
@@ -252,6 +255,7 @@ export default function Home() {
 							className="w-full h-full object-contain"
 							width={400}
 							height={400}
+							quality={100}
 						/>
 					</div>
 				</div>

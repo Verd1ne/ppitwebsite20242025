@@ -240,6 +240,7 @@ export default function CommitteeCarousel() {
 						fill
 						className="object-cover opacity-70"
 						priority
+						quality={100}
 					/>
 					<div className="absolute inset-0 bg-black bg-opacity-20" />
 					<div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
@@ -283,6 +284,7 @@ export default function CommitteeCarousel() {
 								className={`object-cover transition-opacity duration-400 ease-in-out ${
 									activeSection === index ? "opacity-100" : "opacity-0"
 								}`}
+								quality={100}
 							/>
 						))}
 					</div>
@@ -302,7 +304,7 @@ export default function CommitteeCarousel() {
 				{/* Overlay Section */}
 				{showOverlay && (
 					<div
-						className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
+						className="fixed inset-0 bg-black bg-opacity-80  z-[1000] flex items-center justify-center "
 						onClick={() => setShowOverlay(false)}
 					>
 						<div className="p-2 max-w-5xl w-full mx-auto">

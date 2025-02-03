@@ -95,6 +95,7 @@ export default function Home() {
 									fill
 									style={{ objectFit: "cover" }}
 									priority
+									quality={100}
 								/>
 							</div>
 						))}

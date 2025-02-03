@@ -197,8 +197,8 @@
 
 .slide {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -222,6 +222,7 @@
 .next {
 	position: absolute;
 	top: 50%; /* Vertically centered */
+	scale: 1.5 1.5;
 	transform: translateY(-50%);
 	font-size: 5rem; /* Bigger size for the arrows */
 	color: white;
@@ -230,6 +231,8 @@
 	cursor: pointer;
 	z-index: 5; /* Ensure arrows are above the gradient and image */
 	transition: transform 0.2s ease; /* Add hover effect */
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .prev:hover,
