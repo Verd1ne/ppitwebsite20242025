@@ -80,7 +80,7 @@ export default function Home() {
 					<div className="absolute inset-x-0 bottom-0 flex flex-col items-center  md:mb-[-10px]">
 						<Link
 							href="#about-us"
-							className="text-white text-4xl font-light tracking-wider mb-6 drop-shadow-lg !smooth-scroll"
+							className="text-white text-4xl font-light tracking-wider mb-6 drop-shadow-lg"
 						>
 							find out more
 						</Link>
