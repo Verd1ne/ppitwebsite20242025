@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Header from "./Components/Header";
-import PPIT from "../../public/Home/PPIT.png";
+import PPIT from "../../public/Home/PPIT.webp";
 import PPITTablet from "../../public/Home/PPITtablet.png";
 import PPITMobile from "../../public/Home/PPITmobile.webp";
 import AboutImage from "../../public/Home/about-image.JPG";
@@ -69,12 +69,12 @@ export default function Home() {
 						priority
 						quality={90}
 					/>
-					<Image
+					{/* <Image
 						src={PPITTablet}
 						alt="PPIT Hero"
 						className="lg:hidden sm:block hidden w-full h-full object-cover"
 						quality={70}
-					/>
+					/> */}
 					<div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
 					<div className="absolute inset-x-0 bottom-0 flex flex-col items-center  md:mb-[-10px]">
