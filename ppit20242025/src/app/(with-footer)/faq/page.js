@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Header from "../Components/Header";
+import Header from "../../Components/Header";
 
 export default function Faq() {
 	const [openDropdown, setOpenDropdown] = useState(null);
