@@ -96,8 +96,8 @@ export default async function ParticipantPage({ params }) {
             </div>
 
             {/* Name Overlay: Positioned absolutely at the bottom of the relative parent */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 pt-16 bg-gradient-to-t from-black via-black/90 to-transparent">
-              <h1 className="text-5xl font-extrabold tracking-wider leading-tight font-legend text-center text-white">
+            <div className="absolute bottom-0 left-0 right-0 px-4 pt-16 pb-4 bg-gradient-to-t from-black via-black/80 to-transparent">
+              <h1 className="text-4xl font-extrabold tracking-wider leading-tight font-legend text-center text-white">
                 {/* Map name words to uppercase divs for line breaks */}
                 {data.name?.split(" ").map((word, index) => (
                   <div key={index}>{word.toUpperCase()}</div>
@@ -114,15 +114,17 @@ export default async function ParticipantPage({ params }) {
               {/* Negative margin to pull it up slightly, adjust as needed */}
               <div className="bg-red-600 text-white py-2 px-4 inline-block">
                 <span className="font-medium font-montserrat text-sm uppercase">
-                  {/* Join cabang and competition names, ensure uppercase */}
-                  {[
-                    data.cabang,
-                    ...(data.competitions?.map((comp) => comp.competition) ||
-                      []),
-                  ]
-                    .filter(Boolean)
-                    .join(" | ")
-                    .toUpperCase()}
+                  {/* Join cabang and UNIQUE competition names, ensure uppercase */}
+                  {(() => {
+                    const competitionNames = data.competitions?.map(comp => comp.competition) || [];
+                    const uniqueCompetitionNames = [...new Set(competitionNames)];
+                    return [
+                      ...uniqueCompetitionNames
+                    ]
+                      .filter(Boolean)
+                      .join(" | ")
+                      .toUpperCase();
+                  })()}
                 </span>
               </div>
             </div>
@@ -148,22 +150,6 @@ export default async function ParticipantPage({ params }) {
                   ))
                 ) : (
                   <p className="text-lg font-montserrat">To be announced</p>
-                )}
-              </div>
-
-              {/* Bracket Status Section */}
-              <div>
-                <p className="text-xs text-gray-400 font-montserrat mb-1 uppercase tracking-wide">
-                  Bracket Status:
-                </p>
-                {data.competitions && data.competitions.length > 0 ? (
-                  data.competitions.map((comp, index) => (
-                    <li key={index} className="text-lg font-montserrat list-none"> {/* Removed list style */}
-                      {comp.bracketStatus || "Not available"}
-                    </li>
-                  ))
-                ) : (
-                  <p className="text-lg font-montserrat">Not available</p>
                 )}
               </div>
             </div>
