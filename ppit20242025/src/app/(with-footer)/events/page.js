@@ -20,9 +20,34 @@ export default function Home() {
 				"NANTARA <Night at Nusantara> adalah festival meriah yang dipenuhi barang-barang preloved, pertunjukan bakat yang luar biasa, dan cita rasa asli Indonesia! Selain itu, ada juga permainan tradisional Indonesia dan arena permainan untuk memadukan kesenangan dan nostalgia.",
 		},
 		{
-			src: "/images/image3.webp",
-			title: "Upcoming Events",
-			description: "Stay tuned for upcoming events!",
+			src: "/images/image4.webp",
+			title: "Company Visit to UBS HongKong",
+			description: "PPITSZ kali ini berkolaborasi dengan PPIHK untuk mengadakan Company Visit ke UBS AG di Hong Kong dengan topik Global Market dan Banking. UBS sendiri adalah bank investasi global terbesar di Swiss yang menyediakan layanan keuangan di seluruh dunia, dengan fokus pada wealth management, investment banking, dan asset management.",
+		},
+		{
+			src: "/images/image5.webp",
+			title: "Interview with Alumni",
+			description: "Acara 'Sesi 1-on-1 dengan Alumni CUHKSZ' memberikan kesempatan bagi mahasiswa untuk berdiskusi langsung dengan alumni dalam waktu 10 menit. Peserta bisa bertanya tentang karir, pengalaman industri, dan kehidupan setelah lulus.",
+		},
+		{
+			src: "/images/image6.webp",
+			title: "Valentine's Run",
+			description: "Valentine's Run memberikan kesempatan bagi para pemain untuk merayakan Hari Valentine dengan lebih seru serta memenangkan hadiah hingga 1300 RMB melalui permainan minigame seru bersama tim.",
+		},
+		{
+			src: "/images/image7.webp",
+			title: "Shenzhen Cup",
+			description: "SHENZHEN CUP sukses digelar di CUHK Shenzhen! Mahasiswa Indonesia bertanding di cabang Basket, Badminton, dan Mobile Legends.",
+		},
+		{
+			src: "/images/image8.webp",
+			title: "Brain Wars & Seminar Maximize AI",
+			description: "Para peserta adu kepintaran lewat games seru dan belajar trik AI dari data scientist Bryan Tjandra. Topik seminar mencakup: Prompt Engineering, AI Checker & Cara Humanize AI, serta RAG (Retrieval Augmented Generation).",
+		},
+		{
+			src: "/images/image9.webp",
+			title: "COPA 2025",
+			description: '"COPA" atau Competition of PPIT Athletics merupakan kompetisi olahraga terbesar antar pelajar Indonesia di Tiongkok sejak tahun 2019. COPA 2025 dilaksanakan di tiga Region, yakni Region Utara, Region Timur, dan Region Selatan. Acara ini dihadiri oleh 310 peserta dari 11 Cabang di Region Selatan. Cabang olahraga yang dipertandingkan mencakup: Basket, Badminton, Modern Dance dan Esports (Mobile Legends).',
 		},
 	];
 	const [currentSlide, setCurrentSlide] = useState(0);

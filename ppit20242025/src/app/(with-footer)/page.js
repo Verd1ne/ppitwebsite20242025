@@ -32,19 +32,19 @@ export default function Home() {
 	const universities = [
 		{
 			name: "The Chinese University of Hong Kong, Shenzhen",
-			ranking: "#36 QS World Rankings 2025",
+			ranking: "#32 QS World Rankings 2026",
 		},
 		{
 			name: "Harbin Institute of Technology Shenzhen",
-			ranking: "#252 QS World Rankings 2025",
+			ranking: "#256 QS World Rankings 2026",
 		},
 		{
 			name: "Southern University of Science and Technology",
-			ranking: "#284 QS World Rankings 2025",
+			ranking: "#343 QS World Rankings 2026",
 		},
 		{
 			name: "Shenzhen University",
-			ranking: "#508 QS World Rankings 2025",
+			ranking: "#452 QS World Rankings 2026",
 		},
 	];
 
