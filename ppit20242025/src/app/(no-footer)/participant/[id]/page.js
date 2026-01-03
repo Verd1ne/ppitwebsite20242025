@@ -144,125 +144,115 @@ export default function ParticipantPage() {
 
       {/* Poster */}
       <div
-        className="absolute left-1/6 top-[270px] h-md:top-[480px] h-lg:top-[480px] cursor-pointer"
-        style={{ zIndex: step === "poster" ? 30 : 15 }}
+        className="absolute left-1/6 top-[270px] h-md:top-[480px] h-lg:top-[480px] cursor-pointer transition-all duration-700 ease-in-out"
+        style={{
+          top: step === "poster" ? "17vh" : "",
+          transform: `
+            ${step === "poster" ? "scale(1)" : ""}
+          `,
+          zIndex: step === "poster" ? 30 : 15, // increase z-index when big
+        }}
         onClick={handlePosterClick}
       >
-        {/* Translate wrapper */}
-        <div
-          className="transition-transform duration-700 ease-in-out"
-          style={{
-            transform: step === "poster" ? "translateY(-30%)" : "translateY(0)",
-            willChange: "transform",
-          }}
-        >
-          {/* Scale wrapper */}
-          <div
-            className="transition-transform duration-700 ease-in-out"
-            style={{
-              transform: step === "poster" ? "scale(1)" : "",
-              transformOrigin: "center center",
-              willChange: "transform",
-            }}
-          >
-            {step === "poster" ? (
-              <>
-                {posterPage === 0 ? (
-                  <div className="relative">
-                    {/* First Page */}
-                    <Image
-                      src={poster1}
-                      alt=""
-                      className={`
-                        w-[362.9px]
-                        h-md:w-[450px]
-                        h-lg:w-[550px]
-                        rotate-0
-                        drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                        transition-all duration-700 ease-in-out
-                        ${posterPage === 0 ? "opacity-100" : "opacity-0"}
-                      `}
-                      style={{ maxWidth: "none" }}
-                    />
+        {step === "poster" ? (
+          <>
+            {posterPage === 0 ? (
+              <div className="relative">
+              {/* First Page */}
+               <Image
+                src={poster1}
+                alt=""
+                className={`
+                  w-[362.9px]
+                  h-md:w-[450px]
+                  h-lg:w-[550px]
+                  rotate-0
+                  drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
+                  transition-all duration-700 ease-in-out
+                  ${posterPage === 0 ? "opacity-100" : "opacity-0"}
+                `}
+                style={{ maxWidth: "none" }}
+              />
 
-                    {/* Participant name */}
-                    <div
-                      className="
-                        absolute
-                        top-[113px]
-                        left-[118px]
-                        w-[207px]
-                        h-[25px]
-                        h-lg:top-[165px]
-                        h-lg:left-[178px]
-                        h-lg:w-[300px]
-                        h-lg:h-[40px]
-                        font-cinzel-decorative
-                        bg-gradient-to-r from-[#ae8625] via-[#f7ef8a] to-[#ae8625]
-                        bg-clip-text
-                        text-transparent
-                        text-lg
-                        h-lg:text-3xl
-                        text-center
-                        overflow-hidden
-                        whitespace-nowrap
-                      "
-                    >
-                      {data.name}
-                    </div>
-                  </div>
-                ) : (
-                  // Second page
-                  <Image
-                    src={poster2}
-                    alt=""
-                    className={`
-                      w-[362.9px]
-                      h-md:w-[450px]
-                      h-lg:w-[550px]
-                      drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                      transition-all duration-700 ease-in-out
-                      ${posterPage === 1 ? "opacity-100" : "opacity-0"}
-                    `}
-                    style={{ maxWidth: "none" }}
-                  />
-                )}
-              </>
-            ) : (
-              // Small rotated poster
-              <div className="relative rotate-[87.81deg]">
-                <Image
-                  src={poster1}
-                  alt=""
-                  width={225}
-                  style={{ maxWidth: "none" }}
-                />
-                {/* Participant name */}
-                <div
-                  className="
-                    absolute 
-                    top-[68px] 
-                    left-[74px]
-                    w-[120px]
-                    h-[17px]
-                    text-center
-                    font-cinzel-decorative
-                    bg-gradient-to-r from-[#ae8625] via-[#f7ef8a] to-[#ae8625]
-                    bg-clip-text
-                    text-transparent
-                    text-sm
-                    overflow-hidden
-                    whitespace-nowrap
-                  "
-                >
-                  {data.name}
-                </div>
+              {/* Participant name */}
+              <div
+                className="
+                  absolute
+                  top-[113px]
+                  left-[118px]
+
+                  w-[207px]
+                  h-[25px]
+
+                  h-lg:top-[165px]
+                  h-lg:left-[178px]
+                  h-lg:w-[300px]
+                  h-lg:h-[40px]
+
+                  font-cinzel-decorative
+                  bg-gradient-to-r from-[#ae8625] via-[#f7ef8a] to-[#ae8625]
+                  bg-clip-text
+                  text-transparent
+                  text-lg
+                  h-lg:text-3xl
+                  text-center
+                  overflow-hidden
+                  whitespace-nowrap
+                "
+              >
+                {data.name}
               </div>
+            </div>
+            ) : (
+              // Second page
+              <>
+                <Image
+                src={poster2}
+                alt=""
+                className={`
+                  w-[362.9px]
+                  h-md:w-[450px]
+                  h-lg:w-[550px]
+                  drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
+                  transition-all duration-700 ease-in-out
+                  ${posterPage === 1 ? "opacity-100" : "opacity-0"}
+                `}
+                style={{ maxWidth: "none" }}
+              />
+              </>
             )}
+          </>
+        ) : (
+          <div className="relative rotate-[87.81deg]">
+          <Image
+            src={poster1}
+            alt=""
+            width={225}
+            style={{ maxWidth: "none" }}
+          />
+          {/* Participant name */}
+              <div
+                className="
+                  absolute 
+                  top-[68px] 
+                  left-[74px]
+                  w-[120px]
+                  h-[17px]
+                  text-center
+                  font-cinzel-decorative
+                  bg-gradient-to-r from-[#ae8625] via-[#f7ef8a] to-[#ae8625]
+                  bg-clip-text
+                  text-transparent
+                  text-sm
+                  overflow-hidden
+                  whitespace-nowrap
+                "
+              >
+                {data.name}
+              </div>
           </div>
-        </div>
+        )}
       </div>
-
 
       {/* Base Envelope */}
       <div
