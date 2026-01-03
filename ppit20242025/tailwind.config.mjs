@@ -11,6 +11,8 @@ export default {
 				text: ["Open Sans", "serif"],
 				title: ["Poppins", "serif"],
 				montserrat: ["Montserrat", "serif"],
+				cinzel: ["Cinzel", "serif"],
+        		"cinzel-decorative": ["Cinzel Decorative", "serif"],
 			},
 			colors: {
 				background: "var(--background)",

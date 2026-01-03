@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Cinzel, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +15,17 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
+const cinzel = Cinzel({
+	variable: "--font-cinzel",
+	subsets: ['latin'],
+})
+
+const cinzel_decorative = Cinzel_Decorative({
+	variable: "--font-cinzel-decorative",
+	subsets: ['latin'],
+	weight: ["700"],
+})
+
 export const metadata = {
 	title: "PPIT Shenzhen",
 	description: "© 2025 PPIT Shenzhen. All rights reserved.",
@@ -24,7 +35,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className="h-full !scroll-smooth">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${"cinzel-decorative".variable} antialiased`}
 			>
 				{children}
 				<Analytics />
