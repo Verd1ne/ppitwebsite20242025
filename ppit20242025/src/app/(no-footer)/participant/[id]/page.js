@@ -168,7 +168,7 @@ export default function ParticipantPage() {
                   h-lg:w-[550px]
                   rotate-0
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                  animate-fadeIn
+                  ${posterPage === 0 ? "z-40" : "z-30"}
                 `}
                 style={{ maxWidth: "none" }}
               />
@@ -197,7 +197,7 @@ export default function ParticipantPage() {
                   text-center
                   overflow-hidden
                   whitespace-nowrap
-                  animate-fadeIn
+                  z-50
                 "
               >
                 {data.name}
@@ -214,7 +214,7 @@ export default function ParticipantPage() {
                   h-md:w-[450px]
                   h-lg:w-[550px]
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                  animate-fadeIn
+                  ${posterPage === 1 ? "z-40" : "z-30"}
                 `}
                 style={{ maxWidth: "none" }}
               />
