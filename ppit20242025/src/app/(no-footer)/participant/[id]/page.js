@@ -168,8 +168,7 @@ export default function ParticipantPage() {
                   h-lg:w-[550px]
                   rotate-0
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                  transition-all duration-700 ease-in-out
-                  
+                  animate-fadeIn
                 `}
                 style={{ maxWidth: "none" }}
               />
@@ -198,6 +197,7 @@ export default function ParticipantPage() {
                   text-center
                   overflow-hidden
                   whitespace-nowrap
+                  animate-fadeIn
                 "
               >
                 {data.name}
@@ -214,8 +214,7 @@ export default function ParticipantPage() {
                   h-md:w-[450px]
                   h-lg:w-[550px]
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
-                  transition-all duration-700 ease-in-out
-                  
+                  animate-fadeIn
                 `}
                 style={{ maxWidth: "none" }}
               />
