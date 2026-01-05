@@ -169,7 +169,7 @@ export default function ParticipantPage() {
                   rotate-0
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
                   transition-all duration-700 ease-in-out
-                  ${posterPage === 0 ? "opacity-100" : "opacity-0"}
+                  
                 `}
                 style={{ maxWidth: "none" }}
               />
@@ -215,7 +215,7 @@ export default function ParticipantPage() {
                   h-lg:w-[550px]
                   drop-shadow-[10px_10px_3px_rgba(0,0,0,0.6)]
                   transition-all duration-700 ease-in-out
-                  ${posterPage === 1 ? "opacity-100" : "opacity-0"}
+                  
                 `}
                 style={{ maxWidth: "none" }}
               />
